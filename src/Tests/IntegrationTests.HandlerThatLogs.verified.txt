@@ -1,0 +1,68 @@
+﻿{
+  logsForTarget: [
+    {
+      MessageTemplate: Receive message {IncomingMessageType} {IncomingMessageId}.,
+      Level: Information,
+      Properties: {
+        ConversationId: Guid_1,
+        CorrelationId: Guid_2,
+        IncomingMessage: {
+          TypeTag: StartHandlerThatLogs
+        },
+        IncomingMessageId: Guid_2,
+        IncomingMessageType: StartHandlerThatLogs,
+        IncomingMessageTypeLong: StartHandlerThatLogs, Tests, Version=0.0.0.0, PublicKeyToken=ce8ec7717ba6fbb6,
+        MessageIntent: Send,
+        OriginatingEndpoint: SerilogTestsStartHandlerThatLogs,
+        OriginatingHostId: Guid_3,
+        OriginatingMachine: TheMachineName,
+        ProcessingEndpoint: SerilogTestsStartHandlerThatLogs,
+        ReplyToAddress: SerilogTestsStartHandlerThatLogs,
+        SourceContext: StartHandlerThatLogs,
+        TimeSent: DateTime_1
+      }
+    },
+    {
+      MessageTemplate: Sent message {OutgoingMessageType} {OutgoingMessageId}.,
+      Level: Information,
+      Properties: {
+        ConversationId: Guid_1,
+        CorrelationId: Guid_2,
+        MessageIntent: Send,
+        OriginatingEndpoint: SerilogTestsStartHandlerThatLogs,
+        OriginatingHostId: Guid_3,
+        OriginatingMachine: TheMachineName,
+        OutgoingMessage: {
+          TypeTag: StartHandlerThatLogs
+        },
+        OutgoingMessageId: Guid_2,
+        OutgoingMessageType: StartHandlerThatLogs,
+        ProcessingEndpoint: SerilogTestsStartHandlerThatLogs,
+        ReplyToAddress: SerilogTestsStartHandlerThatLogs,
+        SourceContext: StartHandlerThatLogs,
+        UnicastRoutes: {
+          Elements: [
+            SerilogTestsStartHandlerThatLogs
+          ]
+        }
+      }
+    }
+  ],
+  logsWithExceptions: [
+    {
+      MessageTemplate: The message,
+      Level: Error,
+      Properties: {
+        ExceptionDetail: {
+          Elements: {
+            "Type": System.Exception,
+            "HResult": -2146233088,
+            "Message": Exception of type 'System.Exception' was thrown.,
+            "Source": null
+          }
+        },
+        SourceContext: TheHandlerThatThrows
+      }
+    }
+  ]
+}
